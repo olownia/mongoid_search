@@ -20,7 +20,7 @@ module Mongoid::Search
 
       field :_keywords, :type => Array
 
-      index({ :_keywords => 1 }, { :background => true })
+      index({ :_keywords => '2d' }, { :background => true })
 
       before_save :set_keywords
     end
